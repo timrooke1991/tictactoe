@@ -1,0 +1,156 @@
+body {
+	background: #1c1b1b;
+	color: #666;
+	letter-spacing: 1.1px;
+	font-family: 'Play', sans-serif;
+}
+
+h1 {
+	text-align: center;
+	color: #FFF;
+
+
+}
+
+.clearfix {
+	clear: both;
+}
+
+#container {
+	width: 350px;
+	overflow: auto;
+	margin: 40px auto;
+	background: #666;
+	padding-bottom: 40px;
+	border-radius: 10px;
+
+}
+
+#board li {
+	float: left;
+	margin: 10px;
+	height: 70px;
+	width: 70px;
+	font-size: 55px;
+	background: #333;
+	color: #CCC;
+	list-style: none;
+	text-align: center;
+	border-radius: 5px;
+}
+
+#board li:hover, #reset:hover {
+	cursor: pointer;
+	background: #232323;
+}
+
+#reset {
+	border: 0;
+	background: #444;
+	color: #FFF;
+	width: 70%;
+	padding: 15px;
+	border-radius: 5px;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-family: 'Play', sans-serif;
+	outline: none;
+}
+
+.o {
+	color: green !important;
+}
+
+.x {
+	color: red !important;
+}
+
+footer {
+	display: block;
+	text-align: center;
+	padding-top: 20px;
+}
+
+#winner-message {
+	display: none;
+	height: 120px;
+	background: #E5E5E5;
+	transition: background 1.6s;
+	opacity: 0.7;
+	position: absolute;
+	top: 25%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+  	text-align: center;
+  	font-size: 6.5em;
+  	color: green;
+  	letter-spacing: 10px;
+  	font-weight: 700;
+  	text-transform: uppercase;
+  	animation: blur 1.5s ease-out infinite;
+  	text-shadow: 0px 0px 15px #232323, 0px 0px 170px #232323;
+}
+
+#tie-message {
+	display: none;
+	height: 120px;
+	background: #E5E5E5;
+	transition: background 1.6s;
+	opacity: 0.7;
+	position: absolute;
+	top: 25%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+  	text-align: center;
+  	font-size: 6.5em;
+  	color: steelblue;
+  	letter-spacing: 10px;
+  	font-weight: 700;
+  	text-transform: uppercase;
+  	animation: blur 1.5s ease-out infinite;
+  	text-shadow: 0px 0px 15px steelblue, 0px 0px 170px #E5E5E5;
+}
+
+@media (max-width: 540px) {
+	#winner-message, #tie-message {
+		font-size: 3.5em;
+		height: 70px;
+		top: 35%;
+	}
+}
+
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #fff,
+      0px 0px 10px #fff, 
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;
+  }
+}
+
+#try-again {
+	margin: 10px auto;
+	color: red;
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+	display: none;
+}
+
